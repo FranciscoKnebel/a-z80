@@ -1,0 +1,26 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+Options:	-overwrite -log /home/inf01194/rodrigo.ri/z80/logs/1_physical -common_ui 
+Date:		Mon Sep 24 14:11:59 2018
+Host:		ufrgs-server-10 (x86_64 w/Linux 2.6.18-348.1.1.el5) (4cores*16cpus*Intel(R) Xeon(R) CPU L5520 @ 2.27GHz 8192KB)
+OS:		Red Hat Enterprise Linux Server release 5.9 (Tikanga)
+
+License:
+		invs	Innovus Implementation System	15.2	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Create and set the environment variable TMPDIR to /tmp/innovus_temp_6596_ufrgs-server-10_rodrigo.ri_gS5maI.
+
+
+**INFO:  MMMC transition support version v31-84 
+
+Loading fill procedures ...
+[DEV]innovus 1> man IMPSP-9042
+[DEV]innovus 2> exit
+
+*** Memory Usage v#1 (Current mem = 482.250M, initial mem = 175.523M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:10.5, real=0:01:42, mem=482.2M) ---

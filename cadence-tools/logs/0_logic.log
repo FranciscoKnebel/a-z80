@@ -1,0 +1,567 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2016 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: GENUS15.22 - 15.20-s024_1, built Thu Apr 14 2016
+Options: -overwrite -log /home/inf01194/rodrigo.ri/z80/logs/0_logic 
+Date:    Mon Sep 24 13:48:16 2018
+Host:    ufrgs-server-10 (x86_64 w/Linux 2.6.18-348.1.1.el5) (4*Intel(R) Xeon(R) CPU L5520 @ 2.27GHz 8192KB)
+OS:      Red Hat Enterprise Linux Server release 5.9 (Tikanga)
+
+Checking out license: Genus_Synthesis
+
+Loading tool scripts...
+Sourcing GUI preferences file /home/inf01194/rodrigo.ri/.cadence/genus/gui.tcl...
+Finished loading tool scripts (10 seconds elapsed).
+
+WARNING: This version of the tool is 893 days old.
+genus@root:> include 0_load.tcl
+Sourcing './0_load.tcl' (Mon Sep 24 13:48:37 -0300 2018)...
+Sourcing '~/z80/header.tcl' (Mon Sep 24 13:48:37 -0300 2018)...
+
+################################################
+## A-Z80
+## Francisco Knebel, Luciano Zancan, Rodrigo Dal Ri
+##
+## SINTESE LÓGICA - load.tcl
+################################################
+
+### inicializando caminhos...
+  Setting attribute of root '/': 'script_search_path' = ./
+  Setting attribute of root '/': 'init_hdl_search_path' = ./rtl
+### caminhos inicializados.
+
+### inicializando libs...
+
+  Message Summary for Library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOSST/D_CELLS_MOSST_typ_1_80V_25C.lib:
+  **********************************************************************************************************
+  Could not find an attribute in the library. [LBR-436]: 1
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 1
+  **********************************************************************************************************
+ 
+
+  Message Summary for Library /pdk/xfab/XC018_61_3.1.3/synopsys/xc018/MOS3ST/IO_CELLS_3V_MOS3ST_typ_1_80V_3_30V_25C.lib:
+  **********************************************************************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 2
+  An unsupported construct was detected in this library. [LBR-40]: 193
+  **********************************************************************************************************************
+ 
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+### libs lidas.
+
+### Lendo arquivos HDL...
+### arquivos HDL lidos.
+
+### Elaborando o top-level module e lendo constraints...
+UM:  flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:            21             32                                      elaborate
+Statistics for commands executed by read_sdc:
+ "all_inputs"               - successful      2 , failed      0 (runtime  0.00)
+ "all_outputs"              - successful      1 , failed      0 (runtime  0.00)
+ "create_clock"             - successful      1 , failed      0 (runtime  0.00)
+ "get_clocks"               - successful      2 , failed      0 (runtime  0.00)
+ "get_nets"                 - successful      1 , failed      0 (runtime  0.00)
+ "get_ports"                - successful      2 , failed      0 (runtime  0.00)
+ "set_clock_transition"     - successful      2 , failed      0 (runtime  0.00)
+ "set_false_path"           - successful      1 , failed      0 (runtime  0.00)
+ "set_ideal_network"        - successful      1 , failed      0 (runtime  0.00)
+ "set_input_transition"     - successful      2 , failed      0 (runtime  0.00)
+ "set_load"                 - successful      1 , failed      0 (runtime  0.00)
+ "set_units"                - successful      1 , failed      0 (runtime  0.00)
+Total runtime 0
+### module elaborado e contraints lidas.
+
+### Efetuando sintese genérica...
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 13.85 ohm (from lef_library)
+Site size           : 5.51 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       lef_library
+------------------------------------------------
+MET1            H         1.00        0.000111  
+MET2            V         1.00        0.000121  
+MET3            H         1.00        0.000121  
+MET4            V         1.00        0.000121  
+MET5            H         1.00        0.000117  
+METTP           V         1.00        0.000095  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       lef_library
+-------------------------------------------------
+MET1            H         1.00         0.486957  
+MET2            V         1.00         0.357143  
+MET3            H         1.00         0.357143  
+MET4            V         1.00         0.357143  
+MET5            H         1.00         0.357143  
+METTP           V         1.00         0.118182  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+MET1            H         1.00         0.230000  
+MET2            V         1.00         0.280000  
+MET3            H         1.00         0.280000  
+MET4            V         1.00         0.280000  
+MET5            H         1.00         0.280000  
+METTP           V         1.00         0.440000  
+
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:             3              3                                      syn_generic
+### encerrado sintese genérica.
+
+### Efetuando mapeamento...
+Current PLE settings:
+
+Aspect ratio        : 1.00
+Shrink factor       : 1.00
+Scale of res/length : 1.00
+Scale of cap/length : 1.00
+Net derating factor : 1.00
+Thermal factor      : 1.00
+Via Resistance      : 13.85 ohm (from lef_library)
+Site size           : 5.51 um (from lef [tech+cell])
+
+                                   Capacitance  
+  Layer                             / Length         Data source:
+Name        Direction Utilization  (pF/micron)       lef_library
+------------------------------------------------
+MET1            H         1.00        0.000111  
+MET2            V         1.00        0.000121  
+MET3            H         1.00        0.000121  
+MET4            V         1.00        0.000121  
+MET5            H         1.00        0.000117  
+METTP           V         1.00        0.000095  
+
+                                    Resistance   
+  Layer                              / Length         Data source:
+Name        Direction Utilization  (ohm/micron)       lef_library
+-------------------------------------------------
+MET1            H         1.00         0.486957  
+MET2            V         1.00         0.357143  
+MET3            H         1.00         0.357143  
+MET4            V         1.00         0.357143  
+MET5            H         1.00         0.357143  
+METTP           V         1.00         0.118182  
+
+                                        Area     
+  Layer                               / Length        Data source:
+Name        Direction Utilization     (micron)        lef_library
+-------------------------------------------------
+MET1            H         1.00         0.230000  
+MET2            V         1.00         0.280000  
+MET3            H         1.00         0.280000  
+MET4            V         1.00         0.280000  
+MET5            H         1.00         0.280000  
+METTP           V         1.00         0.440000  
+
+Multi-threaded constant propagation [1|0] ...
+Multi-threaded Virtual Mapping    (8 threads per ST process, 8 of 16 CPUs usable)
+ 
+Global mapping target info
+==========================
+Cost Group 'clock' target slack:   373 ps
+Target path end-point (Pin: data_pins__dout_reg[2]/d)
+
+Multi-threaded Technology Mapping (8 threads per ST process, 8 of 16 CPUs usable)
+ 
+Global mapping status
+=====================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+-------------------------------------------------------------------------------
+ global_map               103800        0 
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+         clock               373       17    25000 
+
+ 
+Global incremental target info
+==============================
+Cost Group 'clock' target slack:   245 ps
+Target path end-point (Pin: data_pins__dout_reg[0]/D (SDFFQX2/D))
+
+ 
+Global incremental optimization status
+======================================
+                                   Group   
+                                  Tot Wrst 
+                           Total  Weighted 
+Operation                   Area   Slacks  
+-------------------------------------------------------------------------------
+ global_incr              102874        0 
+
+    Cost Group            Target    Slack    Clock
+--------------------------------------------------
+         clock               245       10    25000 
+
+     flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:           112             70             -0 ps           90.9 ps  syn_map
+### mapeamento encerrado.
+
+### Escrevendo design para 'synthesis/a-z80'...
+Exporting design data for 'z80_top_direct_n' to synthesis/a-z80...
+No loop breaker instances found (cdn_loop_breaker).
+Finished SDC export (command execution time mm:ss (real) = 00:00).
+Info: file synthesis//a-z80.default_emulate_constraint_mode.sdc has been written
+File synthesis//a-z80.mmmc.tcl has been written.
+** To load the database source synthesis/a-z80.invs_setup.tcl in an Innovus session.
+** To load the database source synthesis/a-z80.genus_setup.tcl in an Genus(TM) Synthesis Solution session.
+Finished exporting design data for 'z80_top_direct_n' (command execution time mm:ss cpu = 00:00, real = 00:01).
+.
+### Escrita efetuada.
+
+### Sintese lógica encerrada.
+
+Sourcing '~/z80/reports.tcl' (Mon Sep 24 13:50:02 -0300 2018)...
+### Dump de reports...
+
+
+########################
+### report AREA.
+########################
+
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1
+  Generated on:           Sep 24 2018  01:50:02 pm
+  Module:                 z80_top_direct_n
+  Technology libraries:   D_CELLS_MOSST_typ_1_80V_25C V 2.1.0
+                          IO_CELLS_3V_MOS3ST_typ_1_80V_3_30V_25C 1.1.0
+                          physical_cells 
+                          abstract_models 
+  Operating conditions:   TYPICAL 
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+    Instance      Cells  Cell Area  Net Area   Total Area 
+----------------------------------------------------------
+z80_top_direct_n   2890      64747     37619       102366 
+  alu_              220       4356      1863         6219 
+
+########################
+### report TIMING.
+########################
+
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1
+  Generated on:           Sep 24 2018  01:50:02 pm
+  Module:                 z80_top_direct_n
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+
+Path 1: MET (91 ps) Setup Check with Pin data_pins__dout_reg[0]/CN->D
+          Group: clock
+     Startpoint: (R) ir__opcode_reg[0]/C
+          Clock: (R) clock
+       Endpoint: (F) data_pins__dout_reg[0]/D
+          Clock: (F) clock
+
+                     Capture       Launch     
+        Clock Edge:+   12500            0     
+       Src Latency:+       0            0     
+       Net Latency:+       0 (I)        0 (I) 
+           Arrival:=   12500            0     
+                                              
+             Setup:-     253                  
+     Required Time:=   12247                  
+      Launch Clock:-       0                  
+         Data Path:-   12156                  
+             Slack:=      91                  
+
+#----------------------------------------------------------------------------------------
+#      Timing Point        Flags   Arc   Edge   Cell     Fanout Load Trans Delay Arrival 
+#                                                               (fF)  (ps)  (ps)   (ps)  
+#----------------------------------------------------------------------------------------
+  ir__opcode_reg[0]/C      -       -     R     (arrival)    361    -   500     -       0 
+  ir__opcode_reg[0]/Q      -       C->Q  F     SDFRRQX4       2 11.4    74   304     304 
+  g5941/Q                  -       A->Q  F     BUX1           2 13.4    80   127     431 
+  g5932/Q                  -       A->Q  F     BUX1           1  7.8    59   113     544 
+  g5832/Q                  -       C->Q  R     NO3X1          2 10.2   243   173     718 
+  execute__g143717/Q       -       A->Q  F     NO2X1          4 20.0   131   104     822 
+  execute__g143465/Q       -       A->Q  R     NA2X1          5 22.4   230   156     977 
+  execute__g143289/Q       -       A->Q  F     NA2X1          6 27.9   197   143    1120 
+  execute__g143047/Q       -       A->Q  R     AN22X1         2  9.8   248   183    1303 
+  execute__g143790/Q       -       C->Q  R     OA21X0         3 11.8   362   327    1630 
+  execute__g142816/Q       -       C->Q  R     OA21X0         3 11.5   355   336    1966 
+  execute__g142748/Q       -       AN->Q R     NO4I2X1        1  4.7    76   249    2216 
+  execute__g142734/Q       -       D->Q  R     OA211X0        3 12.7   394   413    2629 
+  execute__g142680/Q       -       A->Q  R     AND2X1         3 13.7   147   167    2795 
+  execute__g142665/Q       -       A->Q  F     NA3X1          3 14.1   191   102    2898 
+  execute__g142636/Q       -       C->Q  R     AN21X1         2  8.6   190   144    3042 
+  execute__g142562/Q       -       C->Q  F     NA4I2X1        5 26.9   150   297    3339 
+  execute__g142542/Q       -       A->Q  R     NO6X0          1  7.0   240   487    3826 
+  execute__g142519/Q       -       B->Q  F     NA3X1          1  9.5   136    96    3922 
+  g5761/Q                  -       A->Q  F     EN2X1          4 19.7   172   212    4134 
+  execute__g25948/Q        -       A->Q  R     ON211X1        2 11.3   232   161    4295 
+  g5760/Q                  -       AN->Q R     NO2I1X1        2 11.6   178   173    4468 
+  g5758/Q                  -       C->Q  F     AN22X1         1  6.3   142    72    4540 
+  g5756/Q                  -       A->Q  R     NA2X1          3 15.8   187   130    4670 
+  alu_/g712/Q              -       D->Q  F     AN221X1        2  9.1   251   114    4784 
+  alu_/g709/Q              -       A->Q  R     NO2X1          3 13.3   212   165    4950 
+  alu_/g699/Q              -       B->Q  F     AN221X1        2  9.1   210   136    5086 
+  alu_/g697/Q              -       A->Q  F     OR2X2          3 17.7    71   171    5256 
+  alu_/g695/Q              -       A->Q  R     ON22X1         1  6.2   235    90    5346 
+  alu_/g694/Q              -       A->Q  F     NO2X1          2 11.5   104    77    5424 
+  alu_/g692/Q              -       A->Q  R     ON22X1         1  6.3   225    98    5522 
+  alu_/g688/Q              -       D->Q  F     ON31X1         3 12.5   165   120    5641 
+  alu_/g46/Q               -       A->Q  F     BTHX1          5 35.5   500   285    5926 
+  alu_/g686/Q              -       A->Q  R     INX1           1  5.3   128   119    6045 
+  alu_/g14/Q               -       A->Q  F     ITHX0          5 24.3   500   281    6326 
+  alu_/g683/Q              -       A->Q  R     AN211X1        1 12.3   303   262    6588 
+  alu_/g74/Q               -       A->Q  F     ITHX1          6 37.0   500   128    6716 
+  alu_/g681/Q              -       A->Q  R     INX1           1 12.3   173   162    6877 
+  alu_/g15/Q               -       A->Q  F     ITHX1          5 24.3   500    93    6970 
+  sw2__g3/Q                -       A->Q  F     BTHX1          4 28.7   500   354    7324 
+  sw1__g11/Q               -       A->Q  F     BTHX6         11 45.7   500   269    7593 
+  alu_/g678/Q              -       AN->Q F     NA2I1X1        1 12.3   112   264    7857 
+  alu_/g1/Q                -       A->Q  R     ITHX1          6 39.0   500   190    8047 
+  alu_/g677/Q              -       A->Q  F     INX1           1 12.3   255   118    8165 
+  alu_/g9/Q                -       A->Q  R     ITHX1          5 23.2   500   168    8333 
+  alu_/g675/Q              -       A->Q  R     AND2X1         1  6.5   100   134    8467 
+  alu_/g672/Q              -       D->Q  F     AN211X1        1 12.3   280    71    8538 
+  alu_/g75/Q               -       A->Q  R     ITHX1          5 35.5   500   207    8745 
+  alu_/g669/Q              -       A->Q  F     INX1           1 12.3   242   117    8862 
+  alu_/g16/Q               -       A->Q  R     ITHX1          5 22.0   500   162    9024 
+  sw2__g4/Q                -       A->Q  R     BTHX1          4 23.5   500   255    9280 
+  sw1__g12/Q               -       A->Q  R     BTHX2          9 41.3   500   233    9512 
+  alu_/g666/Q              -       B->Q  F     NO2I1X1        2 10.3   244   122    9634 
+  alu_/g664/Q              -       B->Q  R     NA2I1X1        1 12.3   172   154    9788 
+  alu_/g3/Q                -       A->Q  F     ITHX1          5 35.4   500   112    9900 
+  alu_/g663/Q              -       A->Q  R     INX1           1 12.3   170   158   10058 
+  alu_/g11/Q               -       A->Q  F     ITHX1          5 27.5   500    98   10156 
+  alu_/g660/Q              -       A->Q  R     INX1           1  6.2   119   111   10267 
+  alu_/g653/Q              -       A->Q  F     NO2X1          1  4.8    56    47   10314 
+  alu_/g641/Q              -       D->Q  R     AN211X0        1 12.3   672   373   10687 
+  alu_/g71/Q               -       A->Q  F     ITHX1          5 36.2   500   147   10834 
+  alu_/g636/Q              -       A->Q  R     INX1           1 12.3   172   160   10994 
+  alu_/g12/Q               -       A->Q  F     ITHX1          6 27.9   500    99   11093 
+  sw2__g8/Q                -       A->Q  F     BTHX1          4 21.7   500   335   11428 
+  sw1__g16/Q               -       A->Q  F     BTHX1          3 15.6   500   318   11746 
+  g5610/Q                  -       A->Q  F     AO22X0         1  6.3   154   410   12156 
+  data_pins__dout_reg[0]/D <<<     -     F     SDFFQX1        1    -     -     0   12156 
+#----------------------------------------------------------------------------------------
+
+
+########################
+### report GATES.
+########################
+
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1
+  Generated on:           Sep 24 2018  01:50:02 pm
+  Module:                 z80_top_direct_n
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+                               
+  Gate    Instances    Area                Library            
+--------------------------------------------------------------
+AN211X0          27    415.044    D_CELLS_MOSST_typ_1_80V_25C 
+AN211X1           5     92.232    D_CELLS_MOSST_typ_1_80V_25C 
+AN21X1           63    774.749    D_CELLS_MOSST_typ_1_80V_25C 
+AN221X0          20    368.928    D_CELLS_MOSST_typ_1_80V_25C 
+AN221X1           3     64.562    D_CELLS_MOSST_typ_1_80V_25C 
+AN222X0           6    129.125    D_CELLS_MOSST_typ_1_80V_25C 
+AN222X1           1     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+AN22X1           43    660.996    D_CELLS_MOSST_typ_1_80V_25C 
+AN311X0           1     18.446    D_CELLS_MOSST_typ_1_80V_25C 
+AN31X1            4     61.488    D_CELLS_MOSST_typ_1_80V_25C 
+AN321X0           2     43.042    D_CELLS_MOSST_typ_1_80V_25C 
+AND2X1          105   1291.248    D_CELLS_MOSST_typ_1_80V_25C 
+AND2X2            2     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+AND2X4            3     83.009    D_CELLS_MOSST_typ_1_80V_25C 
+AND3X1           25    384.300    D_CELLS_MOSST_typ_1_80V_25C 
+AND4X1            6    147.571    D_CELLS_MOSST_typ_1_80V_25C 
+AND5X1            9    249.026    D_CELLS_MOSST_typ_1_80V_25C 
+AND5X2            1     33.818    D_CELLS_MOSST_typ_1_80V_25C 
+AND6X1           38   1168.272    D_CELLS_MOSST_typ_1_80V_25C 
+AO211X0           6    110.678    D_CELLS_MOSST_typ_1_80V_25C 
+AO21X0           25    384.300    D_CELLS_MOSST_typ_1_80V_25C 
+AO21X1            3     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+AO221X0           5    107.604    D_CELLS_MOSST_typ_1_80V_25C 
+AO222X0           1     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+AO22X0           14    258.250    D_CELLS_MOSST_typ_1_80V_25C 
+AO31X0            7    129.125    D_CELLS_MOSST_typ_1_80V_25C 
+AO321X0           4     98.381    D_CELLS_MOSST_typ_1_80V_25C 
+AO32X0            4     86.083    D_CELLS_MOSST_typ_1_80V_25C 
+BTHX0            25    614.880    D_CELLS_MOSST_typ_1_80V_25C 
+BTHX1           246   6050.419    D_CELLS_MOSST_typ_1_80V_25C 
+BTHX2             1     27.670    D_CELLS_MOSST_typ_1_80V_25C 
+BTHX6             1     46.116    D_CELLS_MOSST_typ_1_80V_25C 
+BTLX0             8    196.762    D_CELLS_MOSST_typ_1_80V_25C 
+BTLX1            82   2016.806    D_CELLS_MOSST_typ_1_80V_25C 
+BUX0             75    922.320    D_CELLS_MOSST_typ_1_80V_25C 
+BUX1             39    479.606    D_CELLS_MOSST_typ_1_80V_25C 
+BUX2              8    122.976    D_CELLS_MOSST_typ_1_80V_25C 
+DFFQX0            1     49.190    D_CELLS_MOSST_typ_1_80V_25C 
+DFFRQX0           2    116.827    D_CELLS_MOSST_typ_1_80V_25C 
+DFFRQX1           1     61.488    D_CELLS_MOSST_typ_1_80V_25C 
+DFFRQX2           1     64.562    D_CELLS_MOSST_typ_1_80V_25C 
+DFRQX0            1     49.190    D_CELLS_MOSST_typ_1_80V_25C 
+DFRRQX0           3    175.241    D_CELLS_MOSST_typ_1_80V_25C 
+DFRRQX1           2    122.976    D_CELLS_MOSST_typ_1_80V_25C 
+DFRRQX2           2    129.125    D_CELLS_MOSST_typ_1_80V_25C 
+EN2X0            24    368.928    D_CELLS_MOSST_typ_1_80V_25C 
+EN2X1             1     21.521    D_CELLS_MOSST_typ_1_80V_25C 
+EN3X0             2     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+EO2X0            21    322.812    D_CELLS_MOSST_typ_1_80V_25C 
+INX0              4     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+INX1            241   1481.861    D_CELLS_MOSST_typ_1_80V_25C 
+INX2              3     27.670    D_CELLS_MOSST_typ_1_80V_25C 
+INX4              2     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+ITHX0            45    553.392    D_CELLS_MOSST_typ_1_80V_25C 
+ITHX1            14    258.250    D_CELLS_MOSST_typ_1_80V_25C 
+ITLX0            19    233.654    D_CELLS_MOSST_typ_1_80V_25C 
+ITLX1             3     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+MU2IX1           16    295.142    D_CELLS_MOSST_typ_1_80V_25C 
+MU2X0            38    817.790    D_CELLS_MOSST_typ_1_80V_25C 
+NA2I1X0          33    405.821    D_CELLS_MOSST_typ_1_80V_25C 
+NA2I1X1           7    107.604    D_CELLS_MOSST_typ_1_80V_25C 
+NA2I1X2           1     18.446    D_CELLS_MOSST_typ_1_80V_25C 
+NA2X0             4     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+NA2X1           261   2407.255    D_CELLS_MOSST_typ_1_80V_25C 
+NA2X2             2     30.744    D_CELLS_MOSST_typ_1_80V_25C 
+NA3I1X0          18    276.696    D_CELLS_MOSST_typ_1_80V_25C 
+NA3I1X1           3     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+NA3I1X2           1     27.670    D_CELLS_MOSST_typ_1_80V_25C 
+NA3I2X1           1     21.521    D_CELLS_MOSST_typ_1_80V_25C 
+NA3I2X2           1     30.744    D_CELLS_MOSST_typ_1_80V_25C 
+NA3X1            44    541.094    D_CELLS_MOSST_typ_1_80V_25C 
+NA4I1X1           1     30.744    D_CELLS_MOSST_typ_1_80V_25C 
+NA4I2X1           4    122.976    D_CELLS_MOSST_typ_1_80V_25C 
+NA4X1             3     83.009    D_CELLS_MOSST_typ_1_80V_25C 
+NA5I1X1           1     33.818    D_CELLS_MOSST_typ_1_80V_25C 
+NA5I2X1           2     67.637    D_CELLS_MOSST_typ_1_80V_25C 
+NA5I3X1           3    101.455    D_CELLS_MOSST_typ_1_80V_25C 
+NA5X1             2     61.488    D_CELLS_MOSST_typ_1_80V_25C 
+NA6I1X1          11    405.821    D_CELLS_MOSST_typ_1_80V_25C 
+NA6I3X1          12    442.714    D_CELLS_MOSST_typ_1_80V_25C 
+NA6I4X1           2     79.934    D_CELLS_MOSST_typ_1_80V_25C 
+NA6X1             9    304.366    D_CELLS_MOSST_typ_1_80V_25C 
+NO2I1X0           2     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+NO2I1X1         104   1278.950    D_CELLS_MOSST_typ_1_80V_25C 
+NO2X0             4     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+NO2X1           252   2324.246    D_CELLS_MOSST_typ_1_80V_25C 
+NO2X2             4     61.488    D_CELLS_MOSST_typ_1_80V_25C 
+NO3I1X0          21    322.812    D_CELLS_MOSST_typ_1_80V_25C 
+NO3I1X1           2     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+NO3I2X1           4     86.083    D_CELLS_MOSST_typ_1_80V_25C 
+NO3X0            24    295.142    D_CELLS_MOSST_typ_1_80V_25C 
+NO3X1             7    107.604    D_CELLS_MOSST_typ_1_80V_25C 
+NO3X2             2     49.190    D_CELLS_MOSST_typ_1_80V_25C 
+NO4I1X1           1     30.744    D_CELLS_MOSST_typ_1_80V_25C 
+NO4I2X1           3     92.232    D_CELLS_MOSST_typ_1_80V_25C 
+NO5I1X1           1     33.818    D_CELLS_MOSST_typ_1_80V_25C 
+NO5I2X1           2     67.637    D_CELLS_MOSST_typ_1_80V_25C 
+NO5I3X1           5    169.092    D_CELLS_MOSST_typ_1_80V_25C 
+NO5X2             2     67.637    D_CELLS_MOSST_typ_1_80V_25C 
+NO6I1X0           2     79.934    D_CELLS_MOSST_typ_1_80V_25C 
+NO6I2X0           2     79.934    D_CELLS_MOSST_typ_1_80V_25C 
+NO6I3X0           1     43.042    D_CELLS_MOSST_typ_1_80V_25C 
+NO6I4X1          10    430.416    D_CELLS_MOSST_typ_1_80V_25C 
+NO6I4X2           1     49.190    D_CELLS_MOSST_typ_1_80V_25C 
+NO6X0             6    202.910    D_CELLS_MOSST_typ_1_80V_25C 
+OA211X0          15    276.696    D_CELLS_MOSST_typ_1_80V_25C 
+OA21X0           43    660.996    D_CELLS_MOSST_typ_1_80V_25C 
+OA221X0          13    279.770    D_CELLS_MOSST_typ_1_80V_25C 
+OA222X0           2     49.190    D_CELLS_MOSST_typ_1_80V_25C 
+OA22X0           12    221.357    D_CELLS_MOSST_typ_1_80V_25C 
+OA311X1           1     21.521    D_CELLS_MOSST_typ_1_80V_25C 
+OA31X0            3     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+OA321X0           1     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+OA32X0            5    107.604    D_CELLS_MOSST_typ_1_80V_25C 
+ON211X0          17    261.324    D_CELLS_MOSST_typ_1_80V_25C 
+ON211X1           1     18.446    D_CELLS_MOSST_typ_1_80V_25C 
+ON21X0           53    651.773    D_CELLS_MOSST_typ_1_80V_25C 
+ON21X1            1     15.372    D_CELLS_MOSST_typ_1_80V_25C 
+ON221X0          13    239.803    D_CELLS_MOSST_typ_1_80V_25C 
+ON222X0           5    107.604    D_CELLS_MOSST_typ_1_80V_25C 
+ON22X0           11    169.092    D_CELLS_MOSST_typ_1_80V_25C 
+ON22X1            3     55.339    D_CELLS_MOSST_typ_1_80V_25C 
+ON311X1           2     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+ON31X0           10    153.720    D_CELLS_MOSST_typ_1_80V_25C 
+ON31X1            1     18.446    D_CELLS_MOSST_typ_1_80V_25C 
+ON321X0           2     43.042    D_CELLS_MOSST_typ_1_80V_25C 
+ON32X0            2     36.893    D_CELLS_MOSST_typ_1_80V_25C 
+OR2X0             2     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+OR2X1            41    504.202    D_CELLS_MOSST_typ_1_80V_25C 
+OR2X2             3     46.116    D_CELLS_MOSST_typ_1_80V_25C 
+OR2X4             1     24.595    D_CELLS_MOSST_typ_1_80V_25C 
+OR3X0             6     92.232    D_CELLS_MOSST_typ_1_80V_25C 
+OR4X1             6    147.571    D_CELLS_MOSST_typ_1_80V_25C 
+OR4X2             1     30.744    D_CELLS_MOSST_typ_1_80V_25C 
+OR5X1            10    276.696    D_CELLS_MOSST_typ_1_80V_25C 
+OR6X0             1     33.818    D_CELLS_MOSST_typ_1_80V_25C 
+OR6X1             2     67.637    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFQX0          16   1032.998    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFQX1           1     70.711    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFQX2          26   1838.491    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFRQX0          7    516.499    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFRQX1          2    153.720    D_CELLS_MOSST_typ_1_80V_25C 
+SDFFSQX0          1     67.637    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRQX0           1     64.562    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRQX2         239  16899.977    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRRQX0          5    368.928    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRRQX1         29   2228.940    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRRQX2          6    498.053    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRRQX4         14   1334.290    D_CELLS_MOSST_typ_1_80V_25C 
+SDFRSQX2          2    153.720    D_CELLS_MOSST_typ_1_80V_25C 
+--------------------------------------------------------------
+total          2890  64746.864                                
+
+
+                                          
+     Type      Instances    Area   Area % 
+------------------------------------------
+sequential           362 25997.126   40.2 
+inverter             250  1571.018    2.4 
+buffer               122  1524.902    2.4 
+tristate             444 10053.288   15.5 
+logic               1712 25600.529   39.5 
+physical_cells         0     0.000    0.0 
+------------------------------------------
+total               2890 64746.864  100.0 
+
+
+########################
+### report POWER.
+########################
+
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution GENUS15.22 - 15.20-s024_1
+  Generated on:           Sep 24 2018  01:50:02 pm
+  Module:                 z80_top_direct_n
+  Interconnect mode:      global
+  Area mode:              physical library
+============================================================
+
+                        Leakage    Dynamic      Total    
+    Instance     Cells Power(nW)  Power(nW)   Power(nW)  
+---------------------------------------------------------
+z80_top_direct_n  2890   170.015 3219799.916 3219969.931 
+  alu_             220    11.962  304744.177  304756.139 
+
+### Reports efetuados.
+
+Normal exit.
