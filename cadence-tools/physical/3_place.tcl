@@ -6,7 +6,8 @@ puts "
 ### Posiciona as celulas...
 #############
 "
-place_design
+eval_legacy { setPlaceMode -ignoreScan false }
+place_opt_design
 
 puts "
 #############
