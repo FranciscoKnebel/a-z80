@@ -1,0 +1,31 @@
+# A-Z80
+
+## 0. Setup
+cd Z80
+tcsh
+source /scripts/set_cadence.csh && source /scripts/set_cadence_innovus161.csh
+
+## 1. SINTESE LÓGICA
+
+genus -overwrite -log ~/z80/logs/0_logic
+include 0_load.tcl
+
+Vai gerar netlist em synthesis/a-z80.v
+
+## 2. SINTESE FISICA
+
+innovus -overwrite -log ~/z80/logs/1_physical -common_ui
+
+source physical/1_init.tcl
+source physical/2_power.tcl
+source physical/3_place.tcl
+source physical/4_CTS.tcl
+
+ou
+
+source physical/0_setup.tcl
+
+
+### Authors
+
+Francisco Knebel, Luciano Zancan, Rodrigo Dal Ri
