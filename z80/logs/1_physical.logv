@@ -1,0 +1,37 @@
+[11/13 16:24:17     0s] 
+[11/13 16:24:17     0s] Cadence Innovus(TM) Implementation System.
+[11/13 16:24:17     0s] Copyright 2015 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/13 16:24:17     0s] 
+[11/13 16:24:17     0s] Version:	v15.20-p005_1, built Wed Nov 11 11:16:39 PST 2015
+[11/13 16:24:17     0s] Options:	-overwrite -log /home/inf01194/rodrigo.ri/z80/logs/1_physical -common_ui 
+[11/13 16:24:17     0s] Date:		Tue Nov 13 16:24:16 2018
+[11/13 16:24:17     0s] Host:		ufrgs-server-09 (x86_64 w/Linux 2.6.18-404.el5) (4cores*16cpus*Intel(R) Xeon(R) CPU L5520 @ 2.27GHz 8192KB)
+[11/13 16:24:17     0s] OS:		Red Hat Enterprise Linux Server release 5.11 (Tikanga)
+[11/13 16:24:17     0s] 
+[11/13 16:24:17     0s] License:
+[11/13 16:24:17     0s] 		invs	Innovus Implementation System	15.2	checkout succeeded
+[11/13 16:24:17     0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/13 16:25:26    13s] @(#)CDS: Innovus v15.20-p005_1 (64bit) 11/11/2015 11:16 (Linux 2.6.18-194.el5)
+[11/13 16:25:26    13s] @(#)CDS: NanoRoute 15.20-p005_1 NR151028-1715/15_20-UB (database version 2.30, 298.6.1) {superthreading v1.26}
+[11/13 16:25:26    13s] @(#)CDS: AAE 15.20-p002 (64bit) 11/11/2015 (Linux 2.6.18-194.el5)
+[11/13 16:25:26    13s] @(#)CDS: CTE 15.20-p001_1 () Oct 29 2015 01:50:39 ( )
+[11/13 16:25:26    13s] @(#)CDS: SYNTECH 15.20-b002_1 () Oct 20 2015 02:35:29 ( )
+[11/13 16:25:26    13s] @(#)CDS: CPE v15.20-p002
+[11/13 16:25:26    14s] @(#)CDS: IQRC/TQRC 15.1.2-s269 (64bit) Mon Aug 24 18:22:18 PDT 2015 (Linux 2.6.18-194.el5)
+[11/13 16:25:26    14s] @(#)CDS: OA 22.50-p028 Thu Jul 23 14:59:57 2015
+[11/13 16:25:26    14s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[11/13 16:25:26    14s] @(#)CDS: RCDB 11.6
+[11/13 16:25:26    14s] --- Running on ufrgs-server-09 (x86_64 w/Linux 2.6.18-404.el5) (4cores*16cpus*Intel(R) Xeon(R) CPU L5520 @ 2.27GHz 8192KB) ---
+[11/13 16:25:26    14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_18693_ufrgs-server-09_rodrigo.ri_Mvi12a.
+
+[11/13 16:25:26    14s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_18693_ufrgs-server-09_rodrigo.ri_Mvi12a.
+[11/13 16:25:26    14s] 
+[11/13 16:25:35    15s] 
+[11/13 16:25:35    15s] **INFO:  MMMC transition support version v31-84 
+[11/13 16:25:35    15s] 
+[11/13 16:25:42    16s] Loading fill procedures ...
+[11/13 16:26:05    17s] [DEV]innovus 1> 
+[11/13 16:26:11    18s] *** Memory Usage v#1 (Current mem = 472.660M, initial mem = 175.523M) ***
+[11/13 16:26:12    18s] *** Message Summary: 0 warning(s), 0 error(s)
+[11/13 16:26:12    18s] 
+[11/13 16:26:12    18s] --- Ending "Innovus" (totcpu=0:00:17.9, real=0:01:55, mem=472.7M) ---
