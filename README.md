@@ -2,12 +2,15 @@
 
 ### 0. Setup
 `cd z80`
+
 `tcsh`
+
 `source /scripts/set_cadence.csh && source 
 /scripts/set_cadence_innovus161.csh`
 
 ### 1. Logical Synthesis
 `genus -overwrite -log ~/z80/logs/0_logic`
+
 `include 0_logical.tcl`
 
 Will generate netlist in syntehsis/a-z80.v
